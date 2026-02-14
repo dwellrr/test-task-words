@@ -24,3 +24,56 @@
   font-size: 0.9rem;
   color: var(--color-surface-bright);
 }
+
+.syn-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.syn-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* word left, button right */
+  gap: 12px;
+
+  padding: 10px 12px;
+  border-radius: 12px;
+
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.05);
+
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+
+.syn-row:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.08);
+}
+
+.syn-row.is-selected {
+  border-color: rgba(124, 58, 237, 0.55);
+  background: rgba(124, 58, 237, 0.16);
+}
+
+.syn-word {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.syn-use-btn {
+      flex: 0 0 auto;
+  padding: 6px 10px;
+  border-radius: 10px;
+
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+
+  font-weight: 800;
+  cursor: pointer;
+}

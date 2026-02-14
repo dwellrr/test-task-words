@@ -1,6 +1,6 @@
 
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-output',
@@ -13,4 +13,16 @@ export class OutputComponent {
   @Input() items: string[] = [];
   @Input() loading = false;
   @Input() error: string | null = null;
+
+  @Output() useWord = new EventEmitter<string>();
+
+  selected: string | null = null;
+
+  select(word: string) {
+    this.selected = word;
+  }
+
+  useSelected(word: string) {
+    this.useWord.emit(word);
+  }
 }

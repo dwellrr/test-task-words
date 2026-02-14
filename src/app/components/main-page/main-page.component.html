@@ -1,8 +1,11 @@
-<app-input (submitted)="onSubmitted($event)"></app-input>
+<app-input [value] = "selected_synonym"
+(submitted)="onSubmitted($event)"
+(valueChange)="selected_synonym = $event"></app-input>
 
 <app-output
   [items]="synonyms"
   [loading]="loading"
   [error]="error"
-  [nothing_submitted]="nothing_submitted">
+  [nothing_submitted]="nothing_submitted"
+  (useWord)="onSynonymSelected($event)">
 </app-output>

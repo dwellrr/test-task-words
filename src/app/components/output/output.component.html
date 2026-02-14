@@ -14,7 +14,15 @@
             <div *ngIf="items.length === 0">No synonyms yet.</div>
 
             <ul *ngIf="items.length > 0">
-                <li *ngFor="let w of items">{{ w }}</li>
+                <li *ngFor="let w of items" class="syn-row" [class.is-selected]="w === selected" (click)="select(w)">
+                    <span class="syn-word">{{ w }}</span>
+
+                    <!-- right side action column -->
+                    <button *ngIf="w === selected" type="button" class="syn-use-btn"
+                        (click)="useSelected(w); $event.stopPropagation()">
+                        Use
+                    </button>
+                </li>
             </ul>
         </ng-container>
     </section>

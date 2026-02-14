@@ -3,16 +3,19 @@
    BASE LAYOUT
    ========================= */
 
+.container {min-height: 100%;}
 
 body {
-  margin: 0;
+    
+
   font-family: var(--font-sans);
   background: var(--color-bg);
   color: var(--color-text);
 
-  /* 1) main body full black + center contents */
-  display: grid;
-  place-items: center;
+   display: flex;
+  justify-content: center;  /* horizontal centering */
+  align-items: flex-start;  /* top align so it can grow downward */
+  padding: 40px 18px;
 }
 
 

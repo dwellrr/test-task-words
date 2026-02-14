@@ -12,6 +12,7 @@ import { finalize } from 'rxjs/operators';
 })
 export class MainPageComponent {
   synonyms: string[] = [];
+  selected_synonym: string | null = null
   loading = false;
   error: string | null = null;
   nothing_submitted = true;
@@ -22,7 +23,6 @@ export class MainPageComponent {
     this.loading = true;
     this.error = null;
     this.nothing_submitted = false;
-    console.log("main page caught the event...");
 
     this.api.synonyms(text, 20)
       .pipe(finalize(() => (this.loading = false)))
@@ -30,6 +30,11 @@ export class MainPageComponent {
         next: (words) => (this.synonyms = words),
         error: (e) => (this.error = 'Datamuse request failed (network/CORS?)'),
       });
+  }
+
+  onSynonymSelected(text: string) {
+    this.selected_synonym = text;
+    
   }
 
 }

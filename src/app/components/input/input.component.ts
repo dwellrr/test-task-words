@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -9,8 +9,14 @@ import { FormsModule } from '@angular/forms';
 })
 export class InputComponent {
   @Output() submitted = new EventEmitter<string>();
+  @Output() valueChange = new EventEmitter<string>();
+  @Input() selected_synonym: string | null = null;
 
-  value = '';
+  @Input() value: string | null = '';
+
+  onSynonymInput(v: string) {
+  this.value = v;
+}
 
   submit(ta: HTMLTextAreaElement) {
     const start = ta.selectionStart ?? 0;

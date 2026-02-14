@@ -21,8 +21,24 @@
     "Segoe UI Emoji";
 }
 
-* { box-sizing: border-box; }
-html, body { height: 100%; margin: 0; }
+
+html, body {   
+    margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  min-height: 100vh;           /* can grow beyond viewport */
+  background: var(--color-bg); /* black everywhere */
+}
+
+app-root {
+  display: block;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
 
 /* A centered stack container for all elements */
 .center-stack {
