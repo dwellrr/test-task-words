@@ -7,5 +7,6 @@
       <label class="label">words: {{wordCount}}, symbols {{symCount}}</label>
       <div class="divider"></div>
       <button class="btn-submit" type="button" (click)="submit(ta)">Submit</button>
+      <button class="btn-submit" type="button" (click)="copyToClipboard()">{{ copied ? 'Copied ✓' : 'Copy to clipboard' }}</button>
 </div>
 </div>

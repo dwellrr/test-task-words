@@ -13,6 +13,7 @@ export class InputComponent {
   @Input() selected_synonym: string | null = null;
 
   @Input() value: string | null = '';
+  copied = false;
 
   onSynonymInput(v: string) {
   this.value = v;
@@ -53,4 +54,15 @@ export class InputComponent {
     }
     return 0;
   }
+
+  async copyToClipboard() {
+  if (!this.value?.trim()) return;
+
+  try {
+    await navigator.clipboard.writeText(this.value);
+    this.copied = true;
+  } catch (err) {
+    console.error('Clipboard failed', err);
+  }
+}
 }
