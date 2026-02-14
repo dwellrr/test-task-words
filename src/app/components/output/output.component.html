@@ -1,1 +1,16 @@
-<p>output works!</p>
+<div class="center-stack">
+    <h2 class="h2">Synonyms:</h2>
+
+    <!-- 5) Readonly “can’t type” text area -->
+    <section class="readonly-area" aria-disabled="true">
+        <ng-container *ngIf="loading">Loading…</ng-container>
+
+        <ng-container *ngIf="!loading && error">
+            Error: {{ error }}
+        </ng-container>
+
+        <ng-container *ngIf="!loading && !error">
+            {{ result || 'No result.' }}
+        </ng-container>
+    </section>
+</div>

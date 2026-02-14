@@ -3,40 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UI Elements Demo</title>
+  <title>Test Task</title>
 </head>
 
 <body>
   <main>
-    <div class="center-stack">
-    <!-- 1) Main body is already full black and centered by body + center-stack -->
-
-    <!-- 2) Text-area (editable) -->
-    
-
-    <!-- 3) h1, h2 -->
-    <h1 class="h1">Enter text to find synonyms</h1>
-    <h1 class="h1 h1--highlight">Highlight in result to continue</h1>
-    <textarea class="text-area" placeholder="Editable text area. Type a short paragraph here..."></textarea>
-    <!-- 4) Submit button -->
-     <div class = "flex-row">
-      <label class="label">label for the word count</label>
-      <div class="divider"></div>
-      <button class="btn-submit" type="button">Submit</button>
-    </div>
-    
-    </div>
-    <div class="center-stack">
-    <h2 class="h2">Synonyms:</h2>
-
-    <!-- 5) Readonly “can’t type” text area -->
-    <section class="readonly-area" aria-disabled="true">
-      <div>
-        This area is styled to look non-editable. Use it for long output text, logs, or server responses.
-        <span class="hint">Hint: this is not an input — it’s a display box.</span>
-      </div>
-    </section>
-    </div>
+    <app-input></app-input>
+    <app-output></app-output>
   </main>
 </body>
 </html>

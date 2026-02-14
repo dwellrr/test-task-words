@@ -1,1 +1,11 @@
-<p>input works!</p>
+<div class="center-stack">
+    
+    <h1 class="h1">Enter text to find synonyms</h1>
+    <h1 class="h1 h1--highlight">Highlight in result to continue</h1>
+    <textarea [(ngModel)] = "value" class="text-area" placeholder="Editable text area. Type a short paragraph here..."></textarea>
+     <div class = "flex-row">
+      <label class="label">label for the word count</label>
+      <div class="divider"></div>
+      <button class="btn-submit" type="button" (click)="submit()">Submit</button>
+</div>
+</div>

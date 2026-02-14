@@ -1,0 +1,26 @@
+
+.readonly-area {
+  width: 100%;
+  min-height: 180px;
+
+  padding: 14px 14px;
+
+  border: 3px dashed var(--color-surface);
+  background: linear-gradient(180deg, var(--color-subtle-grey),var(--color-bg), var(--color-surface));
+  color: var(--color-surface-bright);
+
+  box-shadow: var(--shadow-soft);
+
+  /* make it feel non-editable */
+  cursor: text;
+
+  font-size: 1.2rem;
+  line-height: 1.55;
+}
+
+.readonly-area .hint {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--color-surface-bright);
+}

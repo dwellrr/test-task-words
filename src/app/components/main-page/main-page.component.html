@@ -1,1 +1,7 @@
-<p>main-page works!</p>
+<app-input (submitted)="onSubmitted($event)"></app-input>
+
+<app-output
+  [result]="result"
+  [loading]="loading"
+  [error]="error">
+</app-output>
