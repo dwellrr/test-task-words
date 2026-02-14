@@ -46,10 +46,11 @@ app-root {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  align-items: stretch;
+  align-items: center;
   padding: 3rem;
   box-shadow: 0px 0px 40px 00px var(--color-surface);
   border-radius: var(--radius-lg);
+  
 }
 .h1,
 .h2 {

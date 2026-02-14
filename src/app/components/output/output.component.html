@@ -13,7 +13,7 @@
         <ng-container *ngIf="!loading && !error && !nothing_submitted">
             <div *ngIf="items.length === 0">No synonyms yet.</div>
 
-            <ul *ngIf="items.length > 0">
+            <ul *ngIf="items.length > 0" class = "ul">
                 <li *ngFor="let w of items" class="syn-row" [class.is-selected]="w === selected" (click)="select(w)">
                     <span class="syn-word">{{ w }}</span>
 

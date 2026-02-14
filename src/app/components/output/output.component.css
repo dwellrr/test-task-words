@@ -2,8 +2,13 @@
 .readonly-area {
   width: 100%;
   min-height: 180px;
+  display: flex;
+  flex-direction: column;
 
   padding: 14px 14px;
+  text-align: center;
+  align-items: stretch;
+  align-content: center;
 
   border: 3px dashed var(--color-surface);
   background: linear-gradient(180deg, var(--color-subtle-grey),var(--color-bg), var(--color-surface));
@@ -76,4 +81,8 @@
 
   font-weight: 800;
   cursor: pointer;
+}
+
+.ul {
+    padding:0%;
 }
