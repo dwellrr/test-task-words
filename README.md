@@ -8,7 +8,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 - Enter text into the input text field. Highlight some text from the input field and press the submit button - the highlighted text will be searched instead.
 - Word and symbol count for the input
 - Once you have the list of synonyms, select a synonym and click the button "Use" to paste it into the input field
-- "Copy to cipboard" button
+- "Copy to clipboard" button
 
 ![demo](image.png)
 
