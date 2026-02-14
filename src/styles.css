@@ -3,21 +3,16 @@
    ========================= */
 :root {
   --color-bg: #000000;
-  --color-surface: rgba(255, 255, 255, 0.06);
-  --color-surface-strong: rgba(255, 255, 255, 0.10);
-  --color-border: rgba(255, 255, 255, 0.16);
-  --color-border-strong: rgba(255, 255, 255, 0.28);
+  --color-surface-bright: rgb(195, 181, 231);
+  --color-surface: rgb(44, 39, 97);
+  --color-surface-strong: rgb(15, 11, 59);
+  --color-subtle-grey: rgb(0, 0, 1);
 
   --color-text: #ffffff;
   --color-text-muted: rgba(255, 255, 255, 0.72);
 
-  --color-accent: #7c3aed;       /* purple */
-  --color-accent-2: #22d3ee;     /* cyan */
-  --color-highlight-bg: rgba(124, 58, 237, 0.18);
-  --color-highlight-border: rgba(124, 58, 237, 0.55);
-
-  --shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.55);
-  --shadow-accent: 0 0 0 1px rgba(124, 58, 237, 0.35), 0 10px 40px rgba(124, 58, 237, 0.18);
+  --color-accent: rgba(230, 0, 81, 0.867);      
+  --color-accent-2: #eea322;   
 
   --radius-lg: 18px;
   --radius-md: 14px;
