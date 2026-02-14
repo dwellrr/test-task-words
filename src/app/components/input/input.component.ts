@@ -17,6 +17,7 @@ export class InputComponent {
 
   onSynonymInput(v: string) {
   this.value = v;
+  this.copied = false;
 }
 
   submit(ta: HTMLTextAreaElement) {
