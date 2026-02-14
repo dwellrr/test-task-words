@@ -15,6 +15,17 @@ body {
   place-items: center;
 }
 
+.label {
+    font-size: 1.2rem;
+    color: var(--color-surface-bright);
+    padding: 0.7rem;
+    background: var(--color-surface-strong);
+    border: 1px double var(--color-highlight-border);
+    border-radius: var(--radius-lg);
+    font-weight: 800;
+    letter-spacing: 0.01em;
+}
+
 /* A centered stack container for all elements */
 .center-stack {
   width: min(880px, 100%);
@@ -22,7 +33,22 @@ body {
   flex-direction: column;
   gap: 18px;
   align-items: stretch;
+  padding: 3rem;
+  box-shadow: 0px 0px 40px 00px var(--color-surface);
+  border-radius: var(--radius-lg);
 }
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;      /* vertical centering */
+  justify-content: stretch; /* items take natural width */
+
+  width: 100%;              /* stretch horizontally */
+  gap: 12px;                /* spacing between elements */
+}
+
 
 /* =========================
    HEADERS (3)
@@ -32,13 +58,14 @@ body {
   margin: 0;
   font-weight: 800;
   letter-spacing: -0.02em;
-  line-height: 1.1;
+  line-height: 1.3;
+    font-size: 1.2rem;
 }
 
 .h1 {
   font-size: clamp(2rem, 3.2vw, 3rem);
   /* subtle “cool” look with an accent sheen */
-  background: linear-gradient(90deg, var(--color-text), rgba(255,255,255,0.75), var(--color-accent-2));
+  background: var(--color-surface-bright);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -46,19 +73,17 @@ body {
 
 .h2 {
   font-size: clamp(1.35rem, 2.2vw, 1.9rem);
-  color: var(--color-text);
+  color: var(--color-surface-bright);
   opacity: 0.92;
 }
 
 /* Secondary highlighted H1 */
 .h1--highlight {
   display: inline-block;
-  padding: 10px 14px;
-  border-radius: var(--radius-md);
-  background: linear-gradient(180deg, var(--color-highlight-bg), rgba(255,255,255,0.04));
+  background: var(--color-surface-bright);
   border: 1px solid var(--color-highlight-border);
   box-shadow: var(--shadow-accent);
-  color: var(--color-text);
+  color: var(--color-bg);
 }
 
 /* =========================
@@ -70,27 +95,28 @@ body {
   resize: vertical;
 
   padding: 14px 14px;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
-  background: linear-gradient(180deg, var(--color-surface), rgba(255,255,255,0.03));
+  border: 0px solid var(--color-border);
+  background: linear-gradient(180deg, var(--color-surface-strong), var(--color-surface));
   color: var(--color-text);
   box-shadow: var(--shadow-soft);
 
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
-
+  line-height: 1.55;
   outline: none;
   transition: border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
 }
 
 .text-area::placeholder {
-  color: var(--color-text-muted);
+  color: var(--color-surface-bright);
+  
 }
 
 .text-area:focus {
-  border-color: var(--color-highlight-border);
+
+    border: 2px solid var(--color-border);
+  border-color: var(--color-accent-2);
   box-shadow: var(--shadow-accent);
-  transform: translateY(-1px);
 }
 
 /* =========================
@@ -100,9 +126,10 @@ body {
   appearance: none;
   border: 0;
   cursor: pointer;
+  font-size: 1.2rem;
 
-  padding: 12px 16px;
-  border-radius: 999px;
+  padding: 0.7rem;
+  border-radius: var(--radius-lg);
 
   font-weight: 800;
   letter-spacing: 0.01em;
@@ -132,19 +159,17 @@ body {
   min-height: 180px;
 
   padding: 14px 14px;
-  border-radius: var(--radius-lg);
 
-  border: 1px dashed var(--color-border-strong);
-  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-  color: rgba(255,255,255,0.86);
+  border: 3px dashed var(--color-surface);
+  background: linear-gradient(180deg, var(--color-subtle-grey),var(--color-bg), var(--color-surface));
+  color: var(--color-surface-bright);
 
   box-shadow: var(--shadow-soft);
 
   /* make it feel non-editable */
-  cursor: not-allowed;
-  user-select: text;
+  cursor: text;
 
-  font-size: 0.98rem;
+  font-size: 1.2rem;
   line-height: 1.55;
 }
 
@@ -152,13 +177,15 @@ body {
   display: inline-block;
   margin-top: 10px;
   font-size: 0.9rem;
-  color: var(--color-text-muted);
+  color: var(--color-surface-bright);
 }
 
 /*a subtle divider*/
 .divider {
-  height: 1px;
-  background: rgba(255,255,255,0.10);
+  height: 5px;
+  background: linear-gradient(90deg, var(--color-surface-strong), var(--color-accent-2));
   border: 0;
   margin: 6px 0;
+  border-radius: var(--radius-lg);
+    flex: 1;       
 }
