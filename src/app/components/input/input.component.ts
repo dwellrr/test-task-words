@@ -44,4 +44,13 @@ export class InputComponent {
     }
     return 0;
   }
+
+  get symCount(): number {
+    if (this.value != null) {
+      if (!this.value.trim()) return 0;
+
+      return this.value.length;
+    }
+    return 0;
+  }
 }
