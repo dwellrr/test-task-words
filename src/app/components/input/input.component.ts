@@ -12,10 +12,18 @@ export class InputComponent {
 
   value = '';
 
-  submit() {
-    const text = this.value.trim();
+  submit(ta: HTMLTextAreaElement) {
+    const start = ta.selectionStart ?? 0;
+    const end = ta.selectionEnd ?? 0;
+
+    const hasSelection = end > start;
+    const raw = hasSelection
+      ? ta.value.slice(start, end)
+      : ta.value;
+
+    const text = raw.trim();
     if (!text) return;
-    console.log("input is emmitting...");
+
     this.submitted.emit(text);
   }
 }
