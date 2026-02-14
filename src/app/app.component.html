@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UI Elements Demo</title>
+</head>
+
+<body>
+  <main class="center-stack">
+    <!-- 1) Main body is already full black and centered by body + center-stack -->
+
+    <!-- 2) Text-area (editable) -->
+    <textarea class="text-area" placeholder="Editable text area. Type a short paragraph here..."></textarea>
+
+    <!-- 3) h1, h2 -->
+    <h1 class="h1">Primary H1 — White, bold, “cool”</h1>
+    <h1 class="h1 h1--highlight">Secondary H1 — Highlighted</h1>
+    <h2 class="h2">H2 — White, bold, clean</h2>
+
+    <!-- 4) Submit button -->
+    <button class="btn-submit" type="button">Submit</button>
+
+    <!-- 5) Readonly “can’t type” text area -->
+    <section class="readonly-area" aria-disabled="true">
+      <div>
+        This area is styled to look non-editable. Use it for long output text, logs, or server responses.
+        <span class="hint">Hint: this is not an input — it’s a display box.</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
