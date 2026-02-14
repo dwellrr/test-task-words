@@ -10,6 +10,8 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 - Once you have the list of synonyms, select a synonym and click the button "Use" to paste it into the input field
 - "Copy to cipboard" button
 
+![demo](image.png)
+
 ## Reasoning about the project structure
 
 I did not see the need to overengineer the structure. 
