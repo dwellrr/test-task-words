@@ -4,7 +4,7 @@
     <h1 class="h1 h1--highlight">Highlight in result to continue</h1>
     <textarea #ta [(ngModel)] = "value" (ngModelChange)="onSynonymInput($event)" class="text-area" placeholder="Editable text area. Type a short paragraph here..."></textarea>
      <div class = "flex-row">
-      <label class="label">label for the word count</label>
+      <label class="label">words: {{wordCount}}</label>
       <div class="divider"></div>
       <button class="btn-submit" type="button" (click)="submit(ta)">Submit</button>
 </div>

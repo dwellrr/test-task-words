@@ -34,7 +34,9 @@ export class MainPageComponent {
 
   onSynonymSelected(text: string) {
     this.selected_synonym = text;
-    
+
   }
+
+  
 
 }

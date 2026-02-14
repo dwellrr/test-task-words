@@ -32,4 +32,16 @@ export class InputComponent {
 
     this.submitted.emit(text);
   }
+
+  get wordCount(): number {
+    if (this.value != null) {
+      if (!this.value.trim()) return 0;
+
+      return this.value
+        .trim()
+        .split(/\s+/)   // split by whitespace
+        .length;
+    }
+    return 0;
+  }
 }
