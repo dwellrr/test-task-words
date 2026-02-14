@@ -9,7 +9,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './output.component.css'
 })
 export class OutputComponent {
-  @Input() result = '';
+  @Input() nothing_submitted = true;
+  @Input() items: string[] = [];
   @Input() loading = false;
   @Input() error: string | null = null;
 }

@@ -3,14 +3,19 @@
 
     <!-- 5) Readonly “can’t type” text area -->
     <section class="readonly-area" aria-disabled="true">
+        <ng-container *ngIf="nothing_submitted">The result will be here.</ng-container>
         <ng-container *ngIf="loading">Loading…</ng-container>
 
         <ng-container *ngIf="!loading && error">
             Error: {{ error }}
         </ng-container>
 
-        <ng-container *ngIf="!loading && !error">
-            {{ result || 'No result.' }}
+        <ng-container *ngIf="!loading && !error && !nothing_submitted">
+            <div *ngIf="items.length === 0">No synonyms yet.</div>
+
+            <ul *ngIf="items.length > 0">
+                <li *ngFor="let w of items">{{ w }}</li>
+            </ul>
         </ng-container>
     </section>
 </div>

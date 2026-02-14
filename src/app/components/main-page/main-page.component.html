@@ -1,7 +1,8 @@
 <app-input (submitted)="onSubmitted($event)"></app-input>
 
 <app-output
-  [result]="result"
+  [items]="synonyms"
   [loading]="loading"
-  [error]="error">
+  [error]="error"
+  [nothing_submitted]="nothing_submitted">
 </app-output>

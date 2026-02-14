@@ -15,6 +15,7 @@ export class InputComponent {
   submit() {
     const text = this.value.trim();
     if (!text) return;
+    console.log("input is emmitting...");
     this.submitted.emit(text);
   }
 }

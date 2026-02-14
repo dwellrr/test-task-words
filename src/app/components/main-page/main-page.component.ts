@@ -11,21 +11,24 @@ import { finalize } from 'rxjs/operators';
   styleUrl: './main-page.component.css'
 })
 export class MainPageComponent {
-    result = '';
+  synonyms: string[] = [];
   loading = false;
   error: string | null = null;
+  nothing_submitted = true;
 
   constructor(private api: ApiCallsService) {}
 
   onSubmitted(text: string) {
     this.loading = true;
     this.error = null;
+    this.nothing_submitted = false;
+    console.log("main page caught the event...");
 
-    this.api.submit(text)
+    this.api.synonyms(text, 20)
       .pipe(finalize(() => (this.loading = false)))
       .subscribe({
-        next: (res) => (this.result = res.result),
-        error: () => (this.error = 'Request failed'),
+        next: (words) => (this.synonyms = words),
+        error: (e) => (this.error = 'Datamuse request failed (network/CORS?)'),
       });
   }
 
